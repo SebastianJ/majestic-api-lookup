@@ -20,6 +20,8 @@ Or install it yourself as:
 
 ## Usage
 
+Copy credentials.yml.example to credentials.yml and input your Majestic API credentials.
+
 Create files/domains.txt and seed it with the list of domains you want to retrieve metrics for.
 
 Then run:
