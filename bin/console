@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "majestic/api/lookup"
+require "yaml"
+
+# You can add fixtures and/or initialization code here to make experimenting
+# with your gem easier. You can also use a different console, if you like.
+
+# (If you use this, don't forget to add pry to your Gemfile!)
+# require "pry"
+# Pry.start
+
+cfg_path                =   File.join(File.dirname(__FILE__), "../credentials.yml")
+
+if File.exists?(cfg_path)
+  yaml                  =   YAML.load_file(cfg_path)["development"]
+
+  Majestic::Api.configure do |config|
+    config.environment  =   yaml.fetch("environment", :sandbox)
+    config.api_key      =   yaml.fetch("api_key", nil)
+    config.verbose      =   false
+  end
+end
+
+# You can add fixtures and/or initialization code here to make experimenting
+# with your gem easier. You can also use a different console, if you like.
+
+require "pry"
+Pry.config.history.file = File.join(__FILE__, "../.pry_history")
+Pry.start
+
+#require "irb"
+#IRB.start(__FILE__)

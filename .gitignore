@@ -1,0 +1,22 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+/files/
+
+/spec/tmp/
+
+# rspec failure tracking
+.rspec_status
+
+/bin/.pry_history
+.pry_history
+
+credentials.yml
+.ruby-version
+.ruby-gemset
+.DS_Store
