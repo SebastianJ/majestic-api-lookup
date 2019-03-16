@@ -1,8 +1,6 @@
 # Majestic::Api::Lookup
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/majestic/api/lookup`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Simple lookup tool for pulling data from Majestic and exporting it to (for now) CSV.
 
 ## Installation
 
@@ -22,7 +20,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Create files/domains.txt and seed it with the list of domains you want to retrieve metrics for.
+
+Then run:
+```
+bin/analyze
+```
+
+The exported data will be located in files/result.csv
 
 ## Development
 
